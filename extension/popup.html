@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Together Video Sync</title>
+  <style>
+    body { width: 280px; padding: 14px; font: 13px/1.45 system-ui, sans-serif; color: #181818; }
+    h1 { font-size: 16px; margin: 0 0 10px; }
+    label { display: block; font-weight: 600; margin: 10px 0 4px; }
+    input { width: 100%; box-sizing: border-box; padding: 8px; border: 1px solid #bbb; border-radius: 7px; }
+    button { padding: 8px 10px; border: 0; border-radius: 7px; cursor: pointer; }
+    .row { display: flex; gap: 6px; }
+    .row input { flex: 1; min-width: 0; }
+    .row button { white-space: nowrap; }
+    #join { width: 100%; margin-top: 13px; background: #181818; color: white; font-weight: 600; }
+    #status { margin-top: 9px; color: #444; }
+    small { display: block; color: #555; margin-top: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Together Video Sync</h1>
+  <label for="room">Room code</label>
+  <div class="row">
+    <input id="room" placeholder="Create or enter a room" autocomplete="off">
+    <button id="generate" type="button">Generate</button>
+  </div>
+  <label for="server">WebSocket server</label>
+  <input id="server" value="ws://localhost:8787" autocomplete="url">
+  <small>Use localhost for testing on this computer. Friends need a deployed server URL beginning with wss://.</small>
+  <button id="join" type="button">Join on this page</button>
+  <div id="status" role="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Together Video Sync",
+  "version": "0.1.0",
+  "description": "Synchronize play, pause, seeking, and playback position with people in the same room.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "action": {
+    "default_title": "Join Video Sync",
+    "default_popup": "popup.html"
+  }
+}
